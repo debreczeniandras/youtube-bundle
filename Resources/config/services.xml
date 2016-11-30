@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="dga.youtube.client" class="Dga\Youtube\Client">
+            <!-- call a static method -->
+            <factory class="Dga\Youtube\Client" method="factory" />
+            <argument>%dga.youtube.client.params%</argument>
+        </service>
+        <service id="dga.youtube.service" class="Dga\Youtube\Service\YoutubeService">
+            <argument type="service" id="dga.youtube.client"/>
+        </service>
+    </services>
+
+</container>

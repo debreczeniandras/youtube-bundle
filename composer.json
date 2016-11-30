@@ -1,0 +1,25 @@
+{
+    "name": "debreczeni-andras/youtube-bundle",
+    "description": "Symfony Bundle around the Youtube API",
+    "keywords": ["guzzle3", "youtube", "oauth2"],
+    "homepage": "https://github.com/debreczeniandras",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andras Debreczeni",
+            "email": "dev@debreczeniandras.hu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dga\\YoutubeBundle\\": "^0"
+        }
+    },
+    "require": {
+        "debreczeni-andras/youtube-api-guzzle": "^0",
+        "symfony/http-kernel": "^2.3 || ^3.0",
+        "symfony/dependency-injection": "^2.3 || ^3.0",
+        "symfony/config": "^2.3 || ^3.0"
+    }
+}
